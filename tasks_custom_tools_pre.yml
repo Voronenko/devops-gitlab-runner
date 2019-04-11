@@ -1,0 +1,40 @@
+    - name: Custom packages (1/2)
+      apt:
+        name:
+          - python2.7-dev
+          - autoconf
+          - autogen
+          - intltool
+          - libssl1.0-dev
+          - libsnmp-base
+#          - libsnmp-dev 
+          - libpq-dev 
+          - snmp-mibs-downloader 
+          - libsystemd-dev 
+          - libkrb5-dev 
+          - unixodbc-dev
+        update_cache: true
+      become: yes   
+
+    - name: Custom packages (2/2)
+      apt:
+        name:
+          - bison
+          - dpkg-dev
+          - libgdbm-dev
+          - apt-utils 
+          - libtool
+      become: yes  
+
+    - name: Create /usr/local/etc
+      file: path="/usr/local/etc" state="directory"
+      become: yes
+
+    - name: Template gemrc
+      copy:
+        dest: "/usr/local/etc/gemrc"
+        content: |
+          install: --no-document
+          update: --no-document
+      become: yes          
+

@@ -1,0 +1,10 @@
+export ENV_INVENTORY=$PWD/hosts
+export ANSIBLE_INVENTORY=$ENV_INVENTORY
+export REMOTE_HOST=$(ansible-inventory -i hosts --list | jq -r ".gitlab.hosts[0]")
+export REMOTE_USER_INITIAL=slavko
+export REMOTE_PASSWORD_INITIAL=
+export BOX_DEPLOY_USER=slavko
+export ENVIRONMENT=prod
+export PROVIDER=vps
+# if you use sudo
+export BOX_DEPLOY_PASS=

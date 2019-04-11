@@ -1,0 +1,5 @@
+[gitlab]
+192.168.2.113
+
+[gitlab:vars]
+ansible_user=slavko

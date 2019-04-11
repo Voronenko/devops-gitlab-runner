@@ -1,0 +1,20 @@
+- src: softasap.sa-box-bootstrap
+  name: sa-box-bootstrap
+# - src: softasap.sa_gitlab_runner
+#   name: sa-gitlab-runner
+- src: softasap.sa-node-nvm
+  name: sa-node-nvm
+- src: softasap.sa-python
+  name: sa-python
+- src: softasap.sa-python3
+  name: sa-python3
+- src: softasap.sa-docker
+  name: sa-docker
+- src: softasap.sa-go
+  name: sa-go
+- src: softasap.sa_go_gimme
+  name: sa-go-gimme
+- src: softasap.sa-ruby
+  name: sa-ruby
+- src: softasap.sa-node-nvm
+  name: sa-node-nvm
